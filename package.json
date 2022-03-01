@@ -13,9 +13,13 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.0",
     "eslint": "^7.32.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.0.0",
     "eslint-plugin-svelte3": "^3.2.1",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
@@ -25,6 +29,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.0",
     "svelte-rtk": "^0.1.1"
   }
 }
