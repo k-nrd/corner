@@ -6,18 +6,8 @@
   ]
 </script>
 
-<div class="topbar row">
-  <div class="topbar__items column row">
-    {#each topics as topic}
-      <div class="one column">{topic}</div>
-    {/each}
-  </div>
-</div>
-
-<style>
-  .topbar {
-    height: 5rem;
-    background-color: var(--black);
-    color: var(--white);
-  }
-</style>
+<header class="py-4 fixed top-0 left-0 right-0 h-16 bg-slate-900 text-white">
+  {#each topics as topic}
+    <div class="column">{topic}</div>
+  {/each}
+</header>
