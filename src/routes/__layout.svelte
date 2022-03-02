@@ -5,13 +5,7 @@
 </script>
 
 <Topbar />
-<main class="text-slate-900">
+<main class="pt-16 text-slate-900">
   <Sidebar/>
   <slot />
 </main>
-
-<style>
-  main {
-    padding-top: var(--topbar-height);
-  }
-</style>
