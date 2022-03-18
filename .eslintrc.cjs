@@ -10,7 +10,7 @@ module.exports = {
 		'svelte3', 
 		'@typescript-eslint'
 	],
-	ignorePatterns: ['*.cjs'],
+	ignorePatterns: ['*.config.*'],
 	rules: {
 		'comma-dangle': 'off',
 		'func-call-spacing': 'off',
@@ -35,7 +35,8 @@ module.exports = {
 		sourceType: 'module',
 		ecmaVersion: 2020,
 		project: './tsconfig.json',
-    extraFileExtensions: ['svelte']
+		warnOnUnsupportedTypeScriptVersion: false,
+    extraFileExtensions: ['.svelte']
 	},
 	env: {
 		browser: true,
