@@ -10,16 +10,20 @@ module.exports = {
 		'svelte3', 
 		'@typescript-eslint'
 	],
-	ignorePatterns: ['*.config.*'],
+	ignorePatterns: [
+		'*.config.*', 
+		'*.cjs'
+	],
 	rules: {
+    'indent': 'off',
 		'comma-dangle': 'off',
 		'func-call-spacing': 'off',
-    'indent': 'off',
 		'no-multiple-empty-lines': 'off',
-		'space-before-function-paren': ['error', 'always'],
+		'space-before-function-paren': 'off',
+		'@typescript-eslint/indent': ['error', 2],
+		'@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
 		'@typescript-eslint/func-call-spacing': ['error', 'always'],
-		'@typescript-eslint/indent': ['error', 2],
-		'@typescript-eslint/indent': ['error', 2],
+		'@typescript-eslint/space-before-function-paren': ['error', 'always'],
 		'@typescript-eslint/consistent-type-definitions': ['error', 'type'],
 	},
 	overrides: [
@@ -43,4 +47,4 @@ module.exports = {
 		es2017: true,
 		node: true
 	}
-};
+}
