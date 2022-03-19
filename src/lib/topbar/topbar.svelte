@@ -2,7 +2,7 @@
   const topics = [
     'js/ts',
     'elixir',
-    'fp'
+    'fp',
   ]
 </script>
 
