@@ -9,10 +9,13 @@
   title="Example/Button"
   component={Button}
   argTypes={{
-    backgroundColor: { control: 'color' },
-    label: { control: 'text' },
+    text: { control: 'text' },
     onClick: { action: 'onClick' },
-    primary: { control: 'boolean' },
+    secondary: { control: 'boolean' },
+    icon: {
+      control: { type: 'select' },
+      options: ['bi bi-download']
+    },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
@@ -21,37 +24,34 @@
 />
 
 <!-- More on component templates: https://storybook.js.org/docs/svelte/writing-stories/introduction#using-args -->
-<Template let:args>
-  <Button {...args} on:click={args.onClick} />
+<Template id="Primary" let:args>
+  <div style="width: 150px">
+    <Button {...args} />
+  </div>
+</Template>
+
+<Template id="Secondary" let:args>
+  <div style="width: 300px; height: 300px; display: flex; justify-content: center; align-items: center; background-color: var(--darker-gray);">
+    <div style="width: 150px">
+      <Button {...args} />
+    </div>
+  </div>
 </Template>
 
 <!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
 <Story
   name="Primary"
+  template="Primary"
   args={{
-    primary: true,
-    label: 'Button',
+    text: 'Button',
   }}
 />
 
 <Story
   name="Secondary"
+  template="Secondary"
   args={{
-    label: 'Button',
-  }}
-/>
-<Story
-  name="Large"
-  args={{
-    size: 'large',
-    label: 'Button',
-  }}
-/>
-
-<Story
-  name="Small"
-  args={{
-    size: 'small',
-    label: 'Button',
+    text: 'Button',
+    secondary: true,
   }}
 />
