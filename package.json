@@ -7,13 +7,15 @@
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "deploy": "vercel",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "check": "svelte-check --tsconfig ./tsconfig.json --ignore .svelte-kit",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch --ignore .svelte-kit",
     "lint": "eslint --ignore-path .gitignore .",
     "fix": "eslint --ignore-path .gitignore . --fix",
     "prepare": "husky install",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest src --config jest.config.json",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
@@ -38,7 +40,7 @@
     "jest": "^27.0.0",
     "mdsvex": "^0.10.5",
     "postcss": "^8.4.7",
-    "svelte": "^3.44.0",
+    "svelte": "^3.46.4",
     "svelte-check": "^2.2.6",
     "svelte-jester": "^2.0.1",
     "svelte-preprocess": "^4.10.1",
@@ -46,7 +48,14 @@
     "ts-jest": "^27.0.0",
     "tslib": "^2.3.1",
     "typescript": "4.6.2",
-    "vercel": "^24.0.0"
+    "vercel": "^24.0.0",
+    "@storybook/svelte": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-actions": "^6.4.19",
+    "svelte-loader": "^3.1.2",
+    "@storybook/addon-svelte-csf": "^1.1.0",
+    "babel-loader": "^8.2.3"
   },
   "type": "module",
   "dependencies": {

@@ -5,12 +5,12 @@ import { mdsvex } from 'mdsvex'
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.svx'],
 
 	preprocess: [
 		preprocess(),
 		mdsvex({
-			extensions: ['.md'],
+			extensions: ['.svx'],
 			layout: {
 				blog: 'src/routes/blog/_post.svelte'
 			}
