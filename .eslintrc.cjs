@@ -2,9 +2,9 @@ module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
 	extends: [
-	  'standard-with-typescript',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+		'standard-with-typescript',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 	],
 	plugins: [
 		'svelte3', 
@@ -15,7 +15,7 @@ module.exports = {
 		'*.cjs'
 	],
 	rules: {
-    'indent': 'off',
+		'indent': 'off',
 		'comma-dangle': 'off',
 		'func-call-spacing': 'off',
 		'no-multiple-empty-lines': 'off',
@@ -31,6 +31,7 @@ module.exports = {
 			files: ['*.svelte'], 
 			processor: 'svelte3/svelte3',
 			rules: {
+				'no-use-before-define': 'off',
 				'@typescript-eslint/comma-dangle': 'off',
 			}
 		}
@@ -43,7 +44,7 @@ module.exports = {
 		ecmaVersion: 2020,
 		project: './tsconfig.json',
 		warnOnUnsupportedTypeScriptVersion: false,
-    extraFileExtensions: ['.svelte']
+		extraFileExtensions: ['.svelte']
 	},
 	env: {
 		browser: true,
