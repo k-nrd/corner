@@ -16,19 +16,19 @@
       control: { type: 'select' },
       options: [
         'bi bi-download',
-        'bi bi-arrow-right'
-      ]
+        'bi bi-arrow-right',
+      ],
     },
     iconPosition: {
       control: { type: 'select' },
-      options: ['left', 'right']
+      options: ['left', 'right'],
     },
     background: {
       control: { type: 'select' },
       options: [
         'white',
-        'darker-gray'
-      ]
+        'darker-gray',
+      ],
     },
     size: {
       control: { type: 'select' },
