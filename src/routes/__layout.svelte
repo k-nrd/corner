@@ -1,11 +1,9 @@
 <script lang="ts">
   import '../app.css'
-  import Sidebar from '$lib/sidebar'
-  import Topbar from '$lib/topbar'
+  import Navbar from '$lib/sections/navbar'
 </script>
 
-<Topbar />
-<main class="pt-16 text-slate-900">
-  <Sidebar/>
+<Navbar />
+<main>
   <slot />
 </main>
