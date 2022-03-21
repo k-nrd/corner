@@ -1,6 +1,6 @@
 <script lang="ts">
   import { scale } from 'svelte/transition'
-  import { cubicInOut } from 'svelte/easing'
+  import { cubicIn } from 'svelte/easing'
   import Logo from '../../atoms/logo'
 
   export let pages = [
@@ -32,7 +32,7 @@
         {#if hovered === label}
           <div 
             class="navbar__items__item__indicator"
-            transition:scale={{ duration: 400, easing: cubicInOut }}
+            transition:scale={{ duration: 400, easing: cubicIn }}
           ></div>
         {/if}
       </div>
@@ -79,7 +79,9 @@
   }
 
   .navbar__items__item__indicator {
-    min-height: 3px;
+    min-height: 2px;
+    border-radius: 4px;
+    margin-top: 2px;
     width: 100%;
     background-image: var(--blue-gradient);
   }
