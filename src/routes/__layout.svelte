@@ -1,9 +1,8 @@
 <script lang="ts">
   import '../app.css'
-  import Navbar from '$lib/sections/navbar'
+  import Default from '$lib/templates/default'
 </script>
 
-<Navbar />
-<main>
+<Default>
   <slot />
-</main>
+</Default>
