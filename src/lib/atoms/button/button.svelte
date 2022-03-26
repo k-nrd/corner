@@ -4,6 +4,7 @@
   export let icon: string | null = null
   export let iconPosition: 'left' | 'right' = 'left'
   export let background: 'white' | 'darker-gray' = 'white'
+  export let size: 'md' | 'lg' = 'md'
 
   $: iconClass = icon != null ? `bi bi-${icon as string}` : null
 </script>
@@ -12,6 +13,7 @@
   class="button"
   class:primary={!secondary} 
   class:secondary
+  class:lg={size === 'lg'}
   class:background-white={!secondary && background === 'white'}
   class:background-darker-gray={!secondary && background === 'darker-gray'}
 >
@@ -40,6 +42,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .lg {
+    width: 180px;
+    padding: 16px 20px;
   }
 
   .button.primary {

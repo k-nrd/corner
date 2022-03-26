@@ -32,6 +32,7 @@ specifiers:
   mdsvex: ^0.10.5
   modern-normalize: ^1.1.0
   postcss: ^8
+  rxjs: ^7.5.5
   svelte: ^3.46.4
   svelte-check: ^2.2.6
   svelte-jester: ^2.0.1
@@ -42,6 +43,9 @@ specifiers:
   tslib: ^2.3.1
   typescript: 4.6.2
   vercel: ^24.0.0
+
+dependencies:
+  rxjs: 7.5.5
 
 devDependencies:
   '@babel/core': 7.17.8
@@ -10979,6 +10983,12 @@ packages:
       aproba: 1.2.0
     dev: true
 
+  /rxjs/7.5.5:
+    resolution: {integrity: sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
+
   /sade/1.8.1:
     resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
     engines: {node: '>=6'}
@@ -12197,7 +12207,6 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: true
 
   /tsutils/3.21.0_typescript@4.6.2:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}

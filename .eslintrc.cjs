@@ -32,6 +32,7 @@ module.exports = {
 			processor: 'svelte3/svelte3',
 			rules: {
 				'no-use-before-define': 'off',
+				'import/first': 'off',
 				'@typescript-eslint/comma-dangle': 'off',
 				'@typescript-eslint/no-empty-function': 'off'
 			}

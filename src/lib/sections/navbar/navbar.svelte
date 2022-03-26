@@ -1,9 +1,11 @@
 <script lang="ts">
+  import { BehaviorSubject } from 'rxjs'
   import { scale } from 'svelte/transition'
   import { cubicIn } from 'svelte/easing'
   import Logo from '../../atoms/logo'
 
   export let onToggle = (): void => {}
+  export let icon = 'list'
   export let pages = [
     { label: 'Home', href: '/' },
     { label: 'Blog', href: '/blog' },
@@ -12,10 +14,9 @@
     { label: 'Contact', href: '/contact' },
   ]
 
-  let hovered: string | null = null
-  const setHovered = (value: string | null) => {
-    hovered = value
-  }
+  const hovered = new BehaviorSubject<string | null> (null)
+
+  $: iconClass = `bi bi-${icon}`
 </script>
 
 <header class="navbar">
@@ -23,17 +24,17 @@
     <Logo />
   </div>
   <div class="navbar__toggle" on:click={onToggle}>
-    <i class="bi bi-list"></i>
+    <i class={iconClass}></i>
   </div>
   <div class="navbar__items">
     {#each pages as { label, href }}
       <div 
         class="navbar__items__item" 
-        on:mouseenter={() => setHovered (label)}
-        on:mouseleave={() => setHovered (null)}
+        on:mouseenter={() => hovered.next (label)}
+        on:mouseleave={() => hovered.next (null)}
       >
         <a class="navbar__items__item__link" {href}>{label}</a>
-        {#if hovered === label}
+        {#if $hovered === label}
           <div 
             class="navbar__items__item__indicator"
             transition:scale={{ duration: 200, easing: cubicIn }}
@@ -54,7 +55,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
-    height: 50px;
+    min-height: 50px;
   }
 
   .navbar__toggle {
