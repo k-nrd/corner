@@ -15,8 +15,8 @@
     icon: {
       control: { type: 'select' },
       options: [
-        'bi bi-download',
-        'bi bi-arrow-right',
+        'download',
+        'arrow-right',
       ],
     },
     iconPosition: {

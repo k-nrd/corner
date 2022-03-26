@@ -4,6 +4,8 @@
   export let icon: string | null = null
   export let iconPosition: 'left' | 'right' = 'left'
   export let background: 'white' | 'darker-gray' = 'white'
+
+  $: iconClass = icon != null ? `bi bi-${icon as string}` : null
 </script>
 
 <button 
@@ -13,15 +15,15 @@
   class:background-white={!secondary && background === 'white'}
   class:background-darker-gray={!secondary && background === 'darker-gray'}
 >
-  {#if icon && iconPosition === 'left'}
+  {#if iconClass && iconPosition === 'left'}
     <div class="button__icon left">
-      <i class={icon}></i>
+      <i class={iconClass}></i>
     </div>
   {/if}
   <div class="button__text">{ text }</div>
-  {#if icon && iconPosition === 'right'}
+  {#if iconClass && iconPosition === 'right'}
     <div class="button__icon right">
-      <i class={icon}></i>
+      <i class={iconClass}></i>
     </div>
   {/if}
 </button>

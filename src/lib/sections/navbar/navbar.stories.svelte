@@ -6,6 +6,9 @@
 <Meta
   title="3. Sections/Navbar"
   component={Navbar}
+  argTypes={{
+    onToggle: { action: 'onToggle' },
+  }}
 />
 
 <Template let:args>
@@ -14,4 +17,4 @@
   </div>
 </Template>
 
-<Story name="Desktop" />
+<Story name="Main" />

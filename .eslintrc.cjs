@@ -33,6 +33,7 @@ module.exports = {
 			rules: {
 				'no-use-before-define': 'off',
 				'@typescript-eslint/comma-dangle': 'off',
+				'@typescript-eslint/no-empty-function': 'off'
 			}
 		}
 	],

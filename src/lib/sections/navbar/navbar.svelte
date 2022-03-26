@@ -3,6 +3,7 @@
   import { cubicIn } from 'svelte/easing'
   import Logo from '../../atoms/logo'
 
+  export let onToggle = (): void => {}
   export let pages = [
     { label: 'Home', href: '/' },
     { label: 'Blog', href: '/blog' },
@@ -21,6 +22,9 @@
   <div class="navbar__logo">
     <Logo />
   </div>
+  <div class="navbar__toggle" on:click={onToggle}>
+    <i class="bi bi-list"></i>
+  </div>
   <div class="navbar__items">
     {#each pages as { label, href }}
       <div 
@@ -32,8 +36,9 @@
         {#if hovered === label}
           <div 
             class="navbar__items__item__indicator"
-            transition:scale={{ duration: 400, easing: cubicIn }}
-          ></div>
+            transition:scale={{ duration: 200, easing: cubicIn }}
+          >
+          </div>
         {/if}
       </div>
     {/each}
@@ -52,37 +57,55 @@
     height: 50px;
   }
 
-  .navbar__items {
+  .navbar__toggle {
     display: flex;
-    gap: 40px;
-  }
-
-  .navbar__items__item {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 6px 0px;
-    min-width: 30px;
-    height: 24px;
-    flex-grow: 1;
-  }
-
-  .navbar__items__item__link {
     color: var(--white);
-    text-decoration: none;
-    outline: none;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    letter-spacing: 0.5px;
+    font-size: 24px;
   }
 
-  .navbar__items__item__indicator {
-    min-height: 2px;
-    border-radius: 4px;
-    margin-top: 2px;
-    width: 100%;
-    background-image: var(--blue-gradient);
+  .navbar__items {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .navbar__toggle {
+      display: none;
+    }
+
+    .navbar__items {
+      display: flex;
+      gap: 40px;
+    }
+
+    .navbar__items__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 0px;
+      min-width: 30px;
+      height: 24px;
+      flex-grow: 1;
+    }
+
+    .navbar__items__item__link {
+      color: var(--white);
+      text-decoration: none;
+      outline: none;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .navbar__items__item__indicator {
+      min-height: 2px;
+      border-radius: 4px;
+      margin-top: 2px;
+      width: 100%;
+      background-image: var(--blue-gradient);
+    }
   }
 </style>
