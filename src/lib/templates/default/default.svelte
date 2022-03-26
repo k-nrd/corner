@@ -3,14 +3,17 @@
   import Footer from '$lib/sections/footer'
 </script>
 
-<Navbar/>
 <main>
-  <slot></slot>
+  <Navbar/>
+  <div class="page">
+    <slot></slot>
+  </div>
+  <Footer />
 </main>
-<Footer />
 
 <style>
-  main {
+  main, .page {
+    display: flex;
     width: 100%;
     height: 100%;
     background-color: var(--darker-gray);
