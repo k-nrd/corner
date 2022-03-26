@@ -94,7 +94,7 @@
       color: var(--white);
       text-decoration: none;
       outline: none;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 15px;
       line-height: 20px;
       letter-spacing: 0.5px;
