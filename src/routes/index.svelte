@@ -47,7 +47,7 @@
   }
 
   .hero__contents, .hero__contents__item {
-    gap: 16px;
+    gap: var(--gutter-x);
   }
 
   .hero__contents {
@@ -56,7 +56,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 12px;
+    padding: 0 var(--gutter-x);
   }
 
   .hero__contents__item {
@@ -66,21 +66,11 @@
     align-items: center;
   }
 
-  @media (min-width: 576px) {
-    .hero__contents, .hero__contents__item {
-      gap: 24px;
-    }
-
-    .hero__contents {
-      padding: 0 24px;
-    }
-  }
-
   .hero__contents__item__text {
     display: flex;
   }
 
   .hero__contents__item__button {
-    margin-bottom: 0;
+    margin: 0;
   }
 </style>

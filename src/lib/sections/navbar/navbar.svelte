@@ -54,7 +54,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 var(--gutter-x);
     min-height: 50px;
   }
 
@@ -71,10 +71,6 @@
   }
 
   @media (min-width: 576px) {
-    header {
-      padding: 0 24px;
-    }
-
     .navbar__toggle {
       display: none;
     }
