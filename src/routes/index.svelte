@@ -45,8 +45,12 @@
     align-items: center;
     height: calc(100vh - 100px);
   }
+  
+  .hero__contents {
+    gap: calc(var(--gutter-x) * 2);
+  }
 
-  .hero__contents, .hero__contents__item {
+  .hero__contents__item {
     gap: var(--gutter-x);
   }
 
@@ -71,6 +75,20 @@
   }
 
   .hero__contents__item__button {
-    margin: 0;
+    margin: calc(var(--gutter-x) * 0.5) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (min-width: 576px) {
+    .hero__contents {
+      gap: var(--gutter-x);
+    }
+
+    .hero__contents__item__button {
+      width: auto;
+    }
   }
 </style>
