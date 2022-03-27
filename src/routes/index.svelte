@@ -6,7 +6,7 @@
 <div class="hero">
   <div class="hero__contents">
     <div class="hero__contents__item">
-      <Title text="I’m" />
+      <Title text="I'm" />
       <div class="hero__contents__item__text">
         <Title text="Gustavo Konrad" highlight />
         <Title text="." />
@@ -46,14 +46,17 @@
     height: calc(100vh - 100px);
   }
 
+  .hero__contents, .hero__contents__item {
+    gap: 16px;
+  }
+
   .hero__contents {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 24px;
-    gap: 8px;
+    padding: 0 12px;
   }
 
   .hero__contents__item {
@@ -61,7 +64,16 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+  }
+
+  @media (min-width: 576px) {
+    .hero__contents, .hero__contents__item {
+      gap: 24px;
+    }
+
+    .hero__contents {
+      padding: 0 24px;
+    }
   }
 
   .hero__contents__item__text {
@@ -69,6 +81,6 @@
   }
 
   .hero__contents__item__button {
-    margin: 16px 8px 0 8px;
+    margin-bottom: 0;
   }
 </style>

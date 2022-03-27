@@ -22,19 +22,16 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 16px;
   }
 
   .overlay__item {
-    padding: 8px 0;
     margin: 24px 0;
   }
 
   .overlay__item__link {
-    font-weight: 400;
+    font-size: 15px;
     color: var(--white);
     text-decoration: none;
-    letter-spacing: 0.5px;
-    line-height:28px;
   }
 </style>

@@ -33,12 +33,11 @@
 <style>
   .button {
     width: 100%;
-    min-height: 46px;
+    height: 45px;
     border-radius: 8px;
     border: none;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,8 +45,14 @@
   }
 
   .lg {
-    width: 180px;
-    padding: 16px 20px;
+    width: 160px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 576px) {
+    .lg {
+      width: 180px;
+    }
   }
 
   .button.primary {
@@ -63,6 +68,7 @@
 
   .button.primary:hover {
     border: 1px solid transparent;
+    height: 44px;
   }
 
   .button.primary.background-white:hover {
@@ -90,7 +96,12 @@
     color: transparent;
   }
 
+  .button__text {
+    margin-top: 2px;
+  }
+
   .button__icon {
+    margin-top: 3px;
     font-size: 18px;
   }
 

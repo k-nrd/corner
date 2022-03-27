@@ -9,13 +9,19 @@
 
 <style>
   h1 {
-    font-size: 34px;
-    font-weight: 600;
-    line-height: 40px;
+    font-family: 'Exo';
+    font-size: 30px;
+    font-weight: 900;
     letter-spacing: 0.25px;
     color: var(--white);
     margin: 0;
     padding: 0;
+  }
+
+  @media (min-width: 576px) {
+    h1 {
+      font-size: 60px;
+    }
   }
 
   .highlight {
