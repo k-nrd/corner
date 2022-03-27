@@ -6,6 +6,3 @@
 <Default>
   <slot />
 </Default>
-
-<style>
-</style>
