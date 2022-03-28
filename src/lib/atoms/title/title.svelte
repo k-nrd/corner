@@ -9,13 +9,14 @@
 
 <style>
   h1 {
-    font-family: 'Exo';
+    font-family: 'Inter';
     font-size: 30px;
     font-weight: 900;
     letter-spacing: 0.25px;
     color: var(--white);
     margin: 0;
     padding: 0;
+    white-space: nowrap;
   }
 
   @media (min-width: 576px) {

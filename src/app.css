@@ -23,9 +23,14 @@ html {
   --dark-gray: #131517;
   --medium-gray: #26292D;
   --gray: #626262;
+  /*
   --blue: #17FFc6;
   --dark-blue: #0138F7;
-  --blue-gradient: linear-gradient(45deg, var(--blue), var(--dark-blue));
+  --blue-gradient: linear-gradient(135deg, #009B95, #3714B0, #FF7100, #FFD200);
+  */
+  --blue: #0070f3;
+  --purple: #f81ce5;
+  --blue-gradient: linear-gradient(135deg, var(--blue), var(--purple));
 }
 
 @media (min-width: 576px) {
