@@ -8,10 +8,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: var(--card-width, 100%);
     background-color: var(--dark-gray);
     border: 1px solid var(--gray);
     border-radius: 8px;
     padding: var(--gutter-x);
+    gap: calc(var(--gutter-x) * 2);
+    max-width: 450px;
+    width: 100%;
   }
 </style>

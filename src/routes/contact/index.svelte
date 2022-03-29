@@ -15,29 +15,28 @@
       text="message"
       highlight
     />
-    <Title 
-      text="."
-    />
   </div>
   <div class="subtitle">
     I'll be in touch with you shortly.
   </div>
-  <Card --card-width="450px">
-    <Input 
-      type="text"
-      label="Your name"
-      placeholder="Name"
-    />
-    <Input 
-      type="text"
-      label="Your email"
-      placeholder="example@email.com"
-    />
-    <TextArea 
-      label="Your message"
-      placeholder="Hey..."
-    />
-  </Card>
+  <div class="form">
+    <Card>
+      <Input 
+        type="text"
+        label="Your name"
+        placeholder="Name"
+      />
+      <Input 
+        type="text"
+        label="Your email"
+        placeholder="example@email.com"
+      />
+      <TextArea 
+        label="Your message"
+        placeholder="Hey..."
+      />
+    </Card>
+  </div>
 </div>
 
 <style>
@@ -47,19 +46,42 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 64px 0;
+    padding: 24px var(--gutter-x);
   }
 
   .title {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .subtitle {
-    margin-top: var(--gutter-x);
+    margin-top: 24px;
+    text-justify: center;
     color: var(--white);
+    text-align: center;
+    font-size: 15px;
   }
 
   .space {
     width: var(--gutter-x);
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  @media (min-width: 576px) {
+    .container {
+      padding: 64px var(--gutter-x);
+    }
+
+    .form {
+      margin-top: 48px;
+    }
   }
 </style>

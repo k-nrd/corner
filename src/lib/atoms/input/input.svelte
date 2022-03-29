@@ -16,6 +16,7 @@
     color: var(--white);
     gap: 8px;
     width: 100%;
+    font-size: 14px;
   }
 
   input {

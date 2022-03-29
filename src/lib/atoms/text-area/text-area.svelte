@@ -17,6 +17,7 @@
     color: var(--white);
     width: 100%;
     gap: 8px;
+    font-size: 14px;
   }
 
   textarea {

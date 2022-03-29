@@ -10,7 +10,7 @@
 <style>
   h1 {
     font-family: 'Inter';
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 900;
     letter-spacing: 0.25px;
     color: var(--white);
