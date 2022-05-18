@@ -5,6 +5,7 @@
   export let iconPosition: 'left' | 'right' = 'left'
   export let background: 'white' | 'darker-gray' = 'white'
   export let size: 'md' | 'lg' = 'md'
+  export let onClick: ((e: MouseEvent | null | undefined) => void) | null | undefined
 
   $: iconClass = icon != null ? `bi bi-${icon as string}` : null
 </script>
@@ -16,6 +17,7 @@
   class:lg={size === 'lg'}
   class:background-white={!secondary && background === 'white'}
   class:background-darker-gray={!secondary && background === 'darker-gray'}
+  on:click={onClick}
 >
   {#if iconClass && iconPosition === 'left'}
     <div class="button__icon left">

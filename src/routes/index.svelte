@@ -1,6 +1,9 @@
 <script>
   import Title from '$lib/atoms/title'
   import Button from '$lib/atoms/button'
+
+  const toGithub = () =>
+    window.location.replace ('https://github.com/g-konrad')
 </script>
 
 <div class="hero">
@@ -22,10 +25,11 @@
           icon="github" 
           background="darker-gray"
           size="lg"
+          onClick={toGithub}
         />
       </div>
       <div class="hero__contents__item__button">
-        <Button 
+        <Button
           text="Resume" 
           icon="download"
           size="lg"
