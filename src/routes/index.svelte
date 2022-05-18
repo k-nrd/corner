@@ -2,8 +2,9 @@
   import Title from '$lib/atoms/title'
   import Button from '$lib/atoms/button'
 
-  const toGithub = () =>
-    window.location.replace ('https://github.com/g-konrad')
+  const toGithub = () => {
+    location.href = 'https://github.com/g-konrad'
+  }
 </script>
 
 <div class="hero">
