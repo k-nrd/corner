@@ -5,7 +5,7 @@
   export let iconPosition: 'left' | 'right' = 'left'
   export let background: 'white' | 'darker-gray' = 'white'
   export let size: 'md' | 'lg' = 'md'
-  export let onClick: ((e: MouseEvent | null | undefined) => void) | null | undefined
+  export let onClick: ((e: MouseEvent | null | undefined) => void) | null | undefined = null
 
   $: iconClass = icon != null ? `bi bi-${icon as string}` : null
 </script>
